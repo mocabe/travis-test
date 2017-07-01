@@ -4,6 +4,7 @@ sudo: required
 # c++
 language: cpp
 # new stuff is good stuff
+# test on clang and gcc
 matrix:
   include:
     - compiler: gcc
@@ -23,10 +24,6 @@ matrix:
           packages:
             - clang-5.0
       env: COMPILER=clang-5.0
-# test on clang and gcc
-compiler:
-  - clang
-  - gcc
 # lets go
 script:
   - $COMPILER --version
