@@ -1,0 +1,22 @@
+# c++
+language: cpp
+# new stuff is good stuff
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    - llvm-toolchain-precise-4.0
+    packages:
+    - gcc-7
+    - g++-7
+    - clang-4.0
+# test on clang and gcc
+compiler:
+  - clang
+  - gcc
+# lets go
+script:
+  - mkdir build
+  - cd build 
+  - cmake .. && make
+  - ctest
