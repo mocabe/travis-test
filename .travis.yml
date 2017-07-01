@@ -1,3 +1,6 @@
+# enable trusty
+dist: trusty
+sudo: required
 # c++
 language: cpp
 # new stuff is good stuff
@@ -9,17 +12,17 @@ matrix:
           sources:
             - ubuntu-toolchain-r-test
           packages:
-            - g++-7
-      env: COMPILER=g++-7
+            - g++-6
+      env: COMPILER=g++-6
     - compiler: clang
       addons:
         apt:
           sources:
             - ubuntu-toolchain-r-test
-            - llvm-toolchain-precise-4.0
+            - llvm-toolchain-trusty
           packages:
-            - clang-4.0
-      env: COMPILER=clang-4.0
+            - clang-5.0
+      env: COMPILER=clang-5.0
 # test on clang and gcc
 compiler:
   - clang
