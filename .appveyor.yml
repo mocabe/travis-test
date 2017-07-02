@@ -15,4 +15,4 @@ build_script:
   - cmake --build .
 
 test_script:
-  - ctest -C Debug
+  - ctest -V -C Debug
